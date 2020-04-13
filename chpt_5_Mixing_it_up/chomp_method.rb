@@ -1,6 +1,6 @@
 # chomp_method.rb
 
 puts 'Hello there and what\'s your name?'
-name = gets
+name = gets.chomp
 puts 'Your name is ' +  name + '? What a lovely name!'
-puts 'Please to meet you, ' + name + '.  :)'
+puts 'Pleased to meet you, ' + name + '.  :)'
