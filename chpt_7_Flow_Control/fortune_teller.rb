@@ -1,0 +1,11 @@
+# fortune_teller.rb
+
+puts "I am a fortune-teller.  Tell me your name: "
+name = gets.chomp
+
+if name == 'Chris'
+  puts "I see great things in your future"
+else
+  puts "your future is...oh my!  Look at the time!"
+  puts "I really have to go, sorry!"
+end
