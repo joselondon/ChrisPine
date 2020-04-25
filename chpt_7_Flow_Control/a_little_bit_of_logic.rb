@@ -6,8 +6,6 @@ puts  'Hello, ' + name + '.'
 
 if name == 'Chris'
   puts 'What a lovely name!'
-else
-  if name == 'Katy'
+elsif name == 'Katy'
     puts 'What a lovely name!'
-  end
 end
