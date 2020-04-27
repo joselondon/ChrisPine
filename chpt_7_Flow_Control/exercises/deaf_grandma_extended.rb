@@ -10,7 +10,10 @@ while bye_counter < 3
   else
     bye_counter = 0
   end
-  puts "HUH?! SPEAK UP, SONNY!"
+  if bye_counter == 3
+    break
+  end
+    puts "HUH?! SPEAK UP, SONNY!"
 end
 
 puts "NO, NOT SINCE #{rand(1930..1951)}!"
