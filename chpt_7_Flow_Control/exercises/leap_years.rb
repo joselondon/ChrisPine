@@ -13,8 +13,11 @@ puts
 year_count = end_year
 
 while year_count >= start_year
-  if (year_count % 4 == 0) && (year_count % 100 != 0)
+  if year_count % 400 == 0
     puts year_count
   end
-    year_count -= 1
+  if year_count % 4 == 0 && year_count % 100 != 0
+    puts year_count
+  end
+year_count -= 1
 end
