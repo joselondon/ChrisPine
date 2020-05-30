@@ -11,7 +11,6 @@ def old_roman_num_converter(n)
     old_roman_num = []
   end
 
-
   while int > 0
     old_roman_num = 'M' * (int/1000)
     int = int % 1000
