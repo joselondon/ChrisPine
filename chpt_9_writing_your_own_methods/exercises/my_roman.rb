@@ -9,13 +9,15 @@ def modern_roman(n)
 roman = 'M' * thous
 
   if hunds == 9
-    roman = roman + 'CM'
+    roman = roman << 'CM'
   elsif hunds == 5
-    roman = roman + 'D'
+    roman = roman << 'D'
   elsif hunds == 4
-    roman = roman + 'CD'
-  else
-    roman = roman + ('C' * hunds)
+    roman = roman << 'CD'
+  elsif hunds < 4
+    roman = roman << ('C' * hunds)
+  elsif hunds > 5
+    roman = roman << ('C' * (hunds - 5))
   end
 
 puts hunds
