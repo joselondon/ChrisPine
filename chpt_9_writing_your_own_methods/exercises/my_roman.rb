@@ -10,18 +10,33 @@ roman = 'M' * thous
 
   if hunds == 9
     roman = roman << 'CM'
-  elsif hunds == 5
-    roman = roman << 'D'
   elsif hunds == 4
     roman = roman << 'CD'
-  elsif hunds < 4
-    roman = roman << ('C' * hunds)
-  elsif hunds > 5
-    roman = roman << ('C' * (hunds - 5))
+  else
+    roman = roman << 'D' * (n % 1000 /500)
+    roman = roman << 'C' * (n % 500 / 100)
   end
 
-puts hunds
+  if tens == 9
+    roman = roman << 'XC'
+  elsif tens == 4
+    roman = roman << 'XL'
+  else
+    roman = roman << 'L' * (n % 100 /50)
+    roman = roman << 'X' * (n % 50 / 10)
+  end
+
+  if ones == 9
+    roman = roman << 'IX'
+  elsif ones == 4
+    roman = roman << 'IV'
+  else
+    roman = roman << 'V' * (n % 10 /5)
+    roman = roman << 'I' * ones
+  end
+
+
 puts roman
 end
 
-modern_roman(1700)
+modern_roman(2935)
