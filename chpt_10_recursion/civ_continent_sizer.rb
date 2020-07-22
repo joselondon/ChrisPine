@@ -2,7 +2,7 @@
 
 M = 'land'
 o = 'water'
-
+# size  = 1
 world =
         [[o,o,o,o,o,o,o,o,o,o,o],
          [o,o,o,o,M,M,o,o,o,o,o],
@@ -37,7 +37,13 @@ def continent_size (world, x, y)
   size = size + continent_size(world, x+1, y+1)
   size
 end
+=begin
+ME STEPPING THROUGH THIS CODE TO UNDESTAND!!!!
+(5,5)[Land] count =1;  (4,4)[Water] Count =1
+(5,4)[Land] count =2; (4,3)[Land] count=3; (3,2)[water] count =3
+(6,4)Land count =4;  (7,3)land count =5; (8,2)water count = 5
+(4,5)land count = 6; (3,5)water count = 7
+=end
 
-
-puts continent_size(world, 1, 4)
+# puts continent_size(world, 1, 4)
 puts continent_size(world, 5, 5)
