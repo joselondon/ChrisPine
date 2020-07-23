@@ -9,7 +9,7 @@ world =
          [o,o,o,o,o,o,o,o,M,M,o],
          [o,o,o,M,o,o,o,o,o,M,o],
          [o,o,o,M,o,M,M,o,o,o,o],
-         [o,o,o,o,M,M,M,M,o,o,o],
+         [o,o,o,o,M,X,M,M,o,o,o],
          [o,o,o,M,M,M,M,M,M,M,o],
          [o,o,o,M,M,o,M,M,M,o,o],
          [o,o,o,o,o,o,M,M,o,o,o],
@@ -39,10 +39,11 @@ def continent_size (world, x, y)
 end
 =begin
 ME STEPPING THROUGH THIS CODE TO UNDESTAND!!!!
-(5,5)[Land] count =1;  (4,4)[Water] Count =1
-(5,4)[Land] count =2; (4,3)[Land] count=3; (3,2)[water] count =3
-(6,4)Land count =4;  (7,3)land count =5; (8,2)water count = 5
-(4,5)land count = 6; (3,5)water count = 7
+size = 1
+base case (5,5)-L
+(4,4)-W return 0 go back to base - this I do not fully understand, why back to base case (5,5)
+I think that it is due to the return - does the return break?
+
 =end
 
 # puts continent_size(world, 1, 4)
