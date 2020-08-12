@@ -29,13 +29,15 @@ def continent_size (world, x, y)
 #  ...then we count all of the neighbouring eight tiles
 # (and of course their nighbours by way of the recursion).
   size = size + continent_size(world, x-1, y-1)
-  #x = 5, y = 5 becasue x-1,y-1 returns 0 and breaks
+  #M = 5, y = 5 becasue M-1,y-1 returns 0 and breaks
   size = size + continent_size(world, x  , y-1)
-  #x = 4, y = 3 
-      binding.pry
-  size = size + continent_size(world, x+1, y-1)
-  size = size + continent_size(world, x-1, y  )
-  size = size + continent_size(world, x+1, y  )
+  #M = 4, y = 3
+  size = size + continent_size(world, x+1, y-1) # 5,2 = w therefore passing on 4, 3 to neMt
+  #M=4, y=3
+  size = size + continent_size(world, x-1, y  ) #3,3 = l ; 2,3 = w
+  # M = 3, y = 3
+  size = size + continent_size(world, x+1, y  ) # 4, 3=c
+  # M=3, y=3
   size = size + continent_size(world, x-1, y+1)
   size = size + continent_size(world, x  , y+1)
   size = size + continent_size(world, x+1, y+1)
