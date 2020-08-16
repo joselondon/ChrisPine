@@ -5,7 +5,7 @@ M = 'land'
 o = 'water'
 # size  = 1
 world =
-        [[o,o,o,o,o,M,o,o,o,o,o],
+        [[M,M,M,M,M,M,M,M,M,M,M],
          [o,o,o,o,M,M,o,o,o,o,o],
          [o,o,o,o,o,M,o,o,M,M,o],
          [o,o,o,M,o,M,o,o,o,M,o],
@@ -13,12 +13,13 @@ world =
          [o,o,o,o,M,M,M,M,o,o,o],
          [M,M,M,M,M,M,M,M,M,M,M],
          [o,o,o,M,M,o,M,M,M,o,o],
-         [o,o,o,o,o,o,M,M,o,o,o],
+         [o,o,o,o,o,M,M,M,o,o,o],
          [o,M,o,o,o,M,o,o,o,o,o],
          [o,o,o,o,o,M,o,o,o,o,o]]
 
-def continent_size (world, x, y)
-  if world[y][x] != 'land'
+def continent_size (world, x, y) #(9,2)
+  # need a check here to sex if x or why are greater than the array lengths
+  if world[y][x] != 'land' # 2,9 land
     # Either it is water or we already counted it,
     # but either way, we do not want to count it now.
     return 0
@@ -39,5 +40,4 @@ def continent_size (world, x, y)
   size
 end
 
-puts continent_size(world, 5, 5)
-puts continent_size(world, 11,11)
+puts continent_size(world, 4,0)
