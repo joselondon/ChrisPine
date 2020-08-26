@@ -18,10 +18,14 @@ world =
          [o,o,o,o,o,M,o,o,o,o,o]]
 
 def continent_size (world, x, y) #(9,2)
-  # need a check here to sex if x or why are greater than the array lengths
-  if world[y][x] != 'land' # 2,9 land
-    # Either it is water or we already counted it,
-    # but either way, we do not want to count it now.
+
+  if x < 0 || x > 10 || y < 0 || y > 10
+    return 0
+  end
+   #need a check here to see if x or why are greater than the array lengths
+  if world[y][x] != 'land'
+        # Either it is water or we already counted it,
+      # but either way, we do not want to count it now.
     return 0
   end
   # So first we count this tile..
