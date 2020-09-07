@@ -25,8 +25,6 @@ def continent_size (world, x, y) #(9,2)
     return 0
   end
 
-
-  # need a check here to see if x or why are greater than the array lengths
   if world[y][x] != 'land'
     # Either it is water or we already counted it,
     # but either way, we do not want to count it now.
@@ -48,4 +46,4 @@ def continent_size (world, x, y) #(9,2)
   size
 end
 
-puts continent_size(world, 4,0)
+puts continent_size(world, 11,0)
